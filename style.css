@@ -1,0 +1,38 @@
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Footer CSS */
+footer {
+    background-color: #0a0826;
+    color: #D9DBE1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer_title {
+    color: #fff;
+    font-size: 36px;
+}
+
+.footer_icon {
+    font-size: 32px;
+    color: #fff;
+}
+
+
+
+
+/*--------------------------
+        Media Query Css 
+--------------------------*/
+
+/* Mobile Device */
+@media only screen and (max-width:688px ) {
+    
+}
+
+/* Tablet Device */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    
+
+}
