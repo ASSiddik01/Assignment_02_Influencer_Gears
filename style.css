@@ -1,7 +1,10 @@
-/* Poppins Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*--------------------------
+        Base CSS 
+--------------------------*/
 
-/* Base CSS */
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/CSS2?family=Poppins:wght@400;500;600;700&display=swap');
+
 body {
     margin: 0 auto;
 }
@@ -23,7 +26,9 @@ main {
     margin: 30px 0;
 }
 
-/* Navbar */
+/*--------------------------
+        Navbar CSS 
+--------------------------*/
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -37,7 +42,12 @@ main {
     font-weight: 700;
 }
 
-ul li {list-style: none;float: left;margin-left: 30px;font-weight: 600;}
+ul li {
+    list-style: none;
+    float: left;
+    margin-left: 30px;
+    font-weight: 600;
+}
 
 ul li a {
     text-decoration: none;
@@ -53,17 +63,39 @@ ul li a:hover {
     color: #9d9b9b;
 }
 
-/* Banner Sections */
-.banner_photo {
-    background-image: url(image/Circle\ design.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
+/*--------------------------
+        Banner CSS 
+--------------------------*/
 .banner {
     display: flex;
     justify-content: space-around;
     margin: 0 140px;
+    margin-bottom: 20px;
+}
+
+.banner_title {
+    font-size: 52px;
+    line-height: 70px;
+}
+
+.regular_btn {
+    background-color: #e02c6d;
+    padding: 15px 40px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.banner_info p {
+    width: 75%;
+    margin-bottom: 40px;
+}
+
+.banner_photo {
+    background-image: url(image/Circle\ design.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 header:hover .banner_photo img {
@@ -72,39 +104,26 @@ header:hover .banner_photo img {
     transition: transform ease-in-out 2s;
 }
 
-.banner_title {
-    font-size: 52px;
-    line-height: 70px;
+/*--------------------------
+        Brand Area CSS 
+--------------------------*/
+hr {
+    width: 80%;
 }
 
-
-.regular_btn {
-    background-color: #e02c6d;
-    padding: 10px 40px;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-.banner_info p {
-    width: 75%;
-    margin-bottom: 40px;
-}
-
-/* Brand Area */
 .brand_area {
     display: flex;
     justify-content: center;
 }
 
-hr {
-    width: 80%;
+.brand_area img {
+    padding: 20px;
 }
 
-.brand_area img {padding: 20px;}
+/*--------------------------
+    Populer Collections CSS 
+--------------------------*/
 
-/* Populer Collections */
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -142,11 +161,15 @@ hr {
     color: #fb8200;
 }
 
-/* Service Area */
-.services{
+/*--------------------------
+    Service Area CSS 
+--------------------------*/
+
+.services {
     display: flex;
     justify-content: center;
 }
+
 .service {
     width: 362px;
     height: 309px;
@@ -155,7 +178,6 @@ hr {
     overflow: hidden;
     border-radius: 10px;
     position: relative;
-
 }
 
 .service_photo img {
@@ -187,13 +209,16 @@ hr {
 .service:hover .service_details {
     display: block;
 }
-.service:hover .service_photo{
-    transform: scale(1.5) rotate(360deg) ;
+
+.service:hover .service_photo {
+    transform: scale(1.5) rotate(360deg);
     transition: transform 2s ease-in-out;
 }
 
+/*--------------------------
+        Footer CSS 
+--------------------------*/
 
-/* Footer CSS */
 footer {
     background-color: #0a0826;
     color: #D9DBE1;
@@ -201,45 +226,35 @@ footer {
     padding: 20px 0;
 }
 
-.footer_title {
+.footer_title, .footer_icon {
     color: #fff;
     font-size: 36px;
 }
 
-.footer_icon {
-    font-size: 32px;
-    color: #fff;
-}
-
-
-
 
 /*--------------------------
-        Media Query Css 
+        Media Query CSS 
 --------------------------*/
 
-/* Mobile Device */
+/*----Mobile Device----*/
 @media only screen and (max-width:688px) {
 
-    .mainmenu {
-        display: none;
-    }
+    /* Base CSS */
     .section_title {
         font-size: 2em;
     }
 
-    .brand_area {
-        flex-wrap: wrap;
+    /* Navbar CSS */
+    .mainmenu {
+        display: none;
     }
 
-    .products {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
+    /* Banner CSS */
     .banner {
         display: block;
         margin: 0 16px;
         padding: 0;
+        margin-bottom: 50px;
     }
 
     .banner_info {
@@ -247,7 +262,7 @@ footer {
         margin-bottom: 50px;
     }
 
-    .banner_info p {
+    .banner_info p, .banner_photo img {
         width: 100%;
     }
 
@@ -255,22 +270,32 @@ footer {
         transform: scale(1.1) rotate(360deg);
     }
 
-    .banner_photo img {
-        width: 100%;
+    /* Brand Area CSS*/
+    .brand_area {
+        flex-wrap: wrap;
     }
 
+    /* Popular Collection CSS */
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Services Area */
     .services {
         flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-/* Tablet Device */
+/*----Tablet Device------*/
 @media only screen and (min-width:689px) and (max-width:992px) {
 
+    /* Navbar CSS */
     .mainmenu {
         display: none;
     }
+
+    /* Popular Collection CSS */
     .products {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -279,11 +304,7 @@ footer {
         width: 290px;
     }
 
-    .brand_area {
-        flex-wrap: wrap;
-    }
-
-
+    /* Banner CSS */
     .banner {
         align-items: center;
         padding: 0;
@@ -313,11 +334,17 @@ footer {
         padding-top: 50px;
     }
 
+    /* Brand Area CSS*/
+    .brand_area {
+        flex-wrap: wrap;
+    }
+
+    /* Services Area */
     .services {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .service {
         width: 320px;
         height: 273px;
