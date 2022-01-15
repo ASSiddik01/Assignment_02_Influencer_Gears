@@ -54,6 +54,12 @@ ul li a:hover {
 }
 
 /* Banner Sections */
+.banner_photo {
+    background-image: url(image/Circle\ design.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .banner {
     display: flex;
     justify-content: space-around;
