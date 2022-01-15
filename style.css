@@ -3,7 +3,7 @@
 --------------------------*/
 
 /* Poppins Font */
-@import url('https://fonts.googleapis.com/CSS2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body {
     margin: 0 auto;
@@ -69,8 +69,8 @@ ul li a:hover {
 .banner {
     display: flex;
     justify-content: space-around;
-    margin: 0 140px;
-    margin-bottom: 20px;
+    margin: 50px 140px;
+    margin-bottom: 90px;
 }
 
 .banner_title {
@@ -98,7 +98,7 @@ ul li a:hover {
     background-repeat: no-repeat;
 }
 
-header:hover .banner_photo img {
+.banner:hover .banner_photo img {
     transform: scale(1.2) rotate(360deg);
     overflow: hidden;
     transition: transform ease-in-out 2s;
