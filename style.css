@@ -124,6 +124,56 @@ header:hover .banner_photo img {
     color: #fb8200;
 }
 
+/* Service Area */
+.services{
+    display: flex;
+    justify-content: center;
+}
+.service {
+    width: 362px;
+    height: 309px;
+    border: 2px solid red;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.service_photo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service_details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 0 10px 10px;
+    background: #fff;
+    height: 309px;
+    opacity: .7;
+    border-radius: 5px;
+    display: none;
+}
+
+.service_details h4 {
+    text-align: center;
+    background: #d1c4c4;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.service:hover .service_details {
+    display: block;
+}
+.service:hover .service_photo{
+    transform: scale(1.5) rotate(360deg) ;
+    transition: transform 2s ease-in-out;
+}
+
 
 /* Footer CSS */
 footer {
@@ -186,6 +236,11 @@ footer {
     .banner_photo img {
         width: 100%;
     }
+
+    .services {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 /* Tablet Device */
@@ -228,5 +283,15 @@ footer {
     .banner_photo img {
         height: 250px;
         padding-top: 50px;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .service {
+        width: 320px;
+        height: 273px;
     }
 }
